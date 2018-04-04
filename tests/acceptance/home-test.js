@@ -1,14 +1,21 @@
-import { module, test } from 'qunit';
-import { visit, currentURL } from '@ember/test-helpers';
+import { visit, currentURL, click } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
+import { module, test } from 'qunit';
+
+import { startMirage } from 'movie-rating/initializers/ember-cli-mirage';
 
 module('Acceptance | Home Page', function(hooks) {
   setupApplicationTest(hooks);
 
-  test('visiting /home', async function(assert) {
-    await visit('/');
+  hooks.beforeEach(() => {
+    startMirage();
+  });
 
-    assert.equal(currentURL(), '/movies',
-      'User should be redirected to movies when visiting the home page.');
+  test('can visit "Movie Index" from navbar', async function(assert) {
+    await visit('/movies');
+
+    await click('[data-test-nav="movie-index"]');
+
+    assert.equal(currentURL(), '/movies');
   });
 });

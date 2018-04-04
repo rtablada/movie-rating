@@ -21,7 +21,7 @@ module('Acceptance | Movie | Index', function(hooks) {
 
     await visit('/movies');
 
-    assert.equal(currentURL(), '/movie');
+    assert.equal(currentURL(), '/movies');
 
     assert.verifySteps(['reviewRequest']);
   });
@@ -38,7 +38,7 @@ module('Acceptance | Movie | Index', function(hooks) {
       assert.dom(`[data-test-review="${review.id}"] [data-test-title]`).hasText(review.title);
 
       assert.dom(`[data-test-review="${review.id}"] [data-test-rating]`).exists();
-      assert.dom(`[data-test-review="${review.id}"] [data-test-rating]`).hasText(review.rating);
+      assert.dom(`[data-test-review="${review.id}"] [data-test-rating]`).hasText(`${review.rating}`);
     });
   });
 });
