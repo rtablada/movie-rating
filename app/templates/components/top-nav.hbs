@@ -10,12 +10,16 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center visible lg:visible xl:visible lg:w-auto {{unless visible 'sm:hidden md:hidden'}}">
     <div class="text-sm lg:flex-grow lg:flex lg:justify-end">
-      <a href="#responsive-header" class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4">
-        All Movies
-      </a>
-      <a href="#responsive-header" class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4">
+      {{#link-to "movie.index"
+        class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4"
+        data-test-nav="movie.index"}}
+        All Reviews
+      {{/link-to}}
+      {{#link-to "movie.create"
+        class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4"
+        data-test-nav="movie.create"}}
         Add Review
-      </a>
+      {{/link-to}}
     </div>
   </div>
 </nav>

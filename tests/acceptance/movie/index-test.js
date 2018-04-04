@@ -23,7 +23,8 @@ module('Acceptance | Movie | Index', function(hooks) {
 
     assert.equal(currentURL(), '/movies');
 
-    assert.verifySteps(['reviewRequest']);
+    assert.verifySteps(['reviewRequest'],
+      'Expected a GET request to "/reviews"');
   });
 
   test('vising the movie index shows a list of reviews from the API', async function(assert) {
