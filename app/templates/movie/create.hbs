@@ -1,0 +1,36 @@
+<div class="w-full max-w-md mx-auto">
+  <form class="bg-white shadow-md rounded mb-4" onsubmit={{action "saveReview"}}>
+    <div class="p-8 pb-0">
+      <h2>New Review</h2>
+      <div class="mt-4">
+        <label class="block text-grey-darker text-sm font-bold mb-2" for="title">
+          Title
+        </label>
+        {{input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          value=model.title id="title" name="title" type="text" placeholder="Title"}}
+      </div>
+      <div class="mt-4">
+        <label class="block text-grey-darker text-sm font-bold mb-2" for="release-date">
+          Release Date
+        </label>
+        {{input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          value=model.releaseDate id="release-date" name="release-date" type="date" placeholder="Release Date"}}
+      </div>
+      <div class="mt-4">
+        <label class="block text-grey-darker text-sm font-bold mb-2" for="rating">
+          Rating
+        </label>
+        {{input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          value=model.rating id="rating" name="rating" type="number" placeholder="Rating"}}
+      </div>
+    </div>
+    <div class="p-8 flex items-center justify-between">
+      {{#link-to "movie.index" class="bg-grey-dark no-underline hover:bg-grey-darker text-white font-bold py-2 px-4 rounded"}}
+        Cancel
+      {{/link-to}}
+      <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded" type="submit" data-test-submit>
+        Save
+      </button>
+    </div>
+  </form>
+</div>

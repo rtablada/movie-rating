@@ -1,4 +1,6 @@
 <div class="rounded shadow-lg relative mt-4">
+  <Link-To @data-test-link="movie.create" @params={{array "movie.create"}}>Hello</Link-To>
+
   {{#each model.data as |review|}}
     <div class="collection-item" data-test-review={{review.id}}>
       <div class="flex items-center justify-between">
