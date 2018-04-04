@@ -6,6 +6,11 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     'ember-cli-tailwind': {
       buildTarget: 'app'
+    },
+    babel: {
+      plugins: [
+        'transform-object-rest-spread'
+      ]
     }
   });
 
