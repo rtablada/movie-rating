@@ -1,0 +1,7 @@
+.collection-item {
+  @apply .p-4 .bg-grey-lightest;
+}
+
+.collection-item + .collection-item {
+  @apply .border-t .border-grey-light;
+}
