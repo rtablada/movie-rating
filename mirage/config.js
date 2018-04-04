@@ -12,15 +12,10 @@ export default function() {
   // this.namespace = '';    // make this `/api`, for example, if your API is namespaced
   // this.timing = 400;      // delay for each request, automatically set to 0 during testing
 
-  /*
-    Shorthand cheatsheet:
-
-    this.get('/posts');
-    this.post('/posts');
-    this.get('/posts/:id');
-    this.put('/posts/:id'); // or this.patch
-    this.del('/posts/:id');
-
-    http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
-  */
+    this.get('/reviews');
+    this.post('/reviews');
+    this.get('/reviews/:id');
+    this.put('/reviews/:id'); // or this.patch
+    this.patch('/reviews/:id'); // or this.patch
+    this.del('/reviews/:id');
 }
