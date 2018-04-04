@@ -14,8 +14,16 @@ module('Acceptance | Home Page', function(hooks) {
   test('can visit "Movie Index" from navbar', async function(assert) {
     await visit('/movies');
 
-    await click('[data-test-nav="movie-index"]');
+    await click('[data-test-nav="movie.index"]');
 
     assert.equal(currentURL(), '/movies');
+  });
+
+  test('can visit "Movie Create" from navbar', async function(assert) {
+    await visit('/movies');
+
+    await click('[data-test-nav="movie.create"]');
+
+    assert.equal(currentURL(), '/movies/create');
   });
 });
