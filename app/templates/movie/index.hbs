@@ -1,0 +1,11 @@
+<div class="rounded overflow-hidden shadow-lg">
+
+  {{#each model as |review|}}
+    <div class="collection-item" data-test-review={{review.id}}>
+      <div class="flex tems-center justify-between">
+        <h2 data-test-title>{{review.title}}</h2>
+        <h2><span data-test-rating>{{review.rating}}</span>/10</h2>
+      </div>
+    </div>
+  {{/each}}
+</div>
