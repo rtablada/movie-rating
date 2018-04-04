@@ -5,3 +5,11 @@
 .collection-item + .collection-item {
   @apply .border-t .border-grey-light;
 }
+
+.link-btn {
+  @apply .absolute .shadow-md .no-underline;
+  @apply .bg-indigo .pin-t .pin-r .p-4;
+  @apply .rounded-full .h-12 .w-12 .flex .items-center .justify-center;
+
+  transform: translate(50%, -50%);
+}
