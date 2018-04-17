@@ -1,12 +1,14 @@
 <div class="rounded shadow-lg relative mt-4">
-  <Link-To @data-test-link="movie.create" @params={{array "movie.create"}}>Hello</Link-To>
+  <Link-To @data-test-link="movie.create"
+    @params={{array "movie.create"}}
+    @class="link-btn">
+    {{fa-icon "plus"}}
+  </Link-To>
 
   {{#each model.data as |review|}}
-    <div class="collection-item" data-test-review={{review.id}}>
-      <div class="flex items-center justify-between">
-        <h2 data-test-title>{{review.attributes.title}}</h2>
-        <h2><span data-test-rating>{{review.attributes.rating}}</span>/10</h2>
-      </div>
-    </div>
+    <Movie-List-Item @id={{review.id}}
+      @title={{review.attributes.title}}
+      @rating={{review.attributes.rating}}>
+    </Movie-List-Item>
   {{/each}}
 </div>

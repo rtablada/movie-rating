@@ -1,4 +1,4 @@
 {
   "template-only-glimmer-components": true,
-  "application-template-wrapper": true
+  "application-template-wrapper": false
 }
