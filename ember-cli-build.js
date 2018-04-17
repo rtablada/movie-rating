@@ -8,6 +8,7 @@ module.exports = function(defaults) {
       buildTarget: 'app'
     },
     babel: {
+      sourceMaps: 'inline',
       plugins: [
         'transform-object-rest-spread'
       ]
