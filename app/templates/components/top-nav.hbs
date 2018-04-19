@@ -10,14 +10,13 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center visible lg:visible xl:visible lg:w-auto {{unless visible 'sm:hidden md:hidden'}}">
     <div class="text-sm lg:flex-grow lg:flex lg:justify-end">
-      <a
-        class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4">
+      <Link-To @params={{array "movie"}} @class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4">
         All Reviews
-      </a>
-      <a
-        class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4">
+      </Link-To>
+      <Link-To @params={{array "movie.create"}}
+        @class="block lg:inline-block lg:mt-0 font-semibold no-underline text-blue-lighter hover:text-white mt-4 ml-4">
         Add Review
-      </a>
+      </Link-To>
     </div>
   </div>
 </nav>
