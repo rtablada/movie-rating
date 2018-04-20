@@ -10,10 +10,6 @@ module.exports = function(environment) {
       FEATURES: {
         "glimmer-custom-component-manager": true
       },
-      EXTEND_PROTOTYPES: {
-        // Prevent Ember Data from overriding Date.parse.
-        Date: false
-      }
     },
 
     APP: {
